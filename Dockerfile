@@ -10,6 +10,6 @@ RUN mvn -f /service/pom.xml clean package
 # Package stage
 #
 FROM openjdk:11-jre-slim
-COPY --from=build /service/target/broker-0.0.1-SNAPSHOT.jar /usr/local/lib/broker.jar
+COPY --from=build /service/target/Brokers_Project-0.0.1-SNAPSHOT.jar /usr/local/lib/broker.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/local/lib/broker.jar"]
